@@ -11,7 +11,6 @@ dotenv.config();
 export const configSchema = z.object({
   DUNE_API_KEY: z.string().describe("Dune API Key (from https://dune.com/docs/api/)"),
   BASE_URL: z.string().optional().default("https://api.dune.com/api/v1").describe("Dune API base url (optional, default: https://api.dune.com/api/v1)"),
-  debug: z.boolean().default(false).describe("Enable debug logging"),
 });
 
 export default function createStatelessServer({
